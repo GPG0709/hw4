@@ -1,4 +1,12 @@
-<h1>Places</h1>
+  <div class="row">
+    <div class="col-sm-11 text-end">
+      <a href="/places/new" class="btn btn-success">New place </a>
+    </div>
+    
+    <div class="col-sm-4">
+      <h1>Places</h1>
+    </div>
+  </div>
 
 <ul>
   <% if @current_user %>
@@ -7,7 +15,4 @@
     <% end %>
   </ul>
 
-  <p>
-    <a href="/places/new">New place</a>
-  </p>
   <% end %>

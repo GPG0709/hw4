@@ -7,14 +7,14 @@ class SessionsController < ApplicationController
     if @user
       if BCrypt::Password.new(@user["password"]) == params["password"]
         session["user_id"] = @user["id"]
-        flash["notice"] = "Hello."
+        flash["notice"] = "Hi! It's so good to see you again"
         redirect_to "/places"
       else
-        flash["notice"] = "Nope."
+        flash["notice"] = "Nope"
         redirect_to "/login"
       end
     else
-      flash["notice"] = "Nope."
+      flash["notice"] = "Nope"
       redirect_to "/login"
     end
   end
